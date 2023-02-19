@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% for country in all_countries  %}
+    <div class="country">
+        <div class="content">
+            <a href="/countries/{{country.id}}">{{ country.country_name }}</a>
+            <li>Continent: {{ country.country_continent }}</li>
+            <li>Population: {{ country.country_population }}</li>
+            <li>Language: {{ country.country_language }}</li>
+        </div>
+    </div>
+{% endfor %}
+    
+{% endblock  %}
