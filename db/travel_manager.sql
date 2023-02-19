@@ -12,6 +12,6 @@ CREATE TABLE countries (
     country_name VARCHAR(255),
     country_continent VARCHAR(255),
     country_population INT,
-    country_language VARCHAR(255)
+    country_language VARCHAR(255),
     city_id INT NOT NULL REFERENCES cities(id)
 );
