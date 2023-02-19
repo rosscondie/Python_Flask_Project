@@ -26,3 +26,13 @@ def select_all():
                 countries.append(country)
         return countries
 
+def select(id):
+        country = None
+        sql = "SELECT * FROM countries WHERE id = %s"
+        values = [id]
+        results = run_sql(sql, values)
+        if results:
+                result = results[0]
+                city = city_repository.select(result['city_id'])
+                country = Country(result['country_name'], result['country_continent'], result['country_population'], result['country_language'], city, result['id'])
+        return country
