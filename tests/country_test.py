@@ -4,7 +4,7 @@ from models.country import Country
 class TestCountry(unittest.TestCase):
 
     def setUp(self):
-        self.country = Country("Germany", "Europe", 83200000, "German")
+        self.country = Country("Germany", "Europe", 832000000, "German")
 
     def test_country_has_name(self):
         self.assertEqual("Germany", self.country.name)
@@ -17,3 +17,6 @@ class TestCountry(unittest.TestCase):
 
     def test_country_has_language(self):
         self.assertEqual("German", self.country.language)
+
+    # def test_population_returns_as_float(self):
+    #     self.assertEqual(83.2, self.country.get_population)
