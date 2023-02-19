@@ -7,7 +7,7 @@ class TestCity(unittest.TestCase):
         self.city = City("Hannover", "Germany")
 
     def test_city_has_name(self):
-        self.assertEqual("Hannover", self.city.name)
+        self.assertEqual("Hannover", self.city.city_name)
 
     def test_city_has_country(self):
         self.assertEqual("Germany", self.city.country)

@@ -1,9 +1,9 @@
 class Country:
-    def __init__(self, name, continent, population, language, id = None):
-        self.name = name
-        self.continent = continent
-        self.population = population
-        self.language = language
+    def __init__(self, country_name, country_continent, country_population, country_language, id = None):
+        self.country_name = country_name
+        self.country_continent = country_continent
+        self.country_population = country_population
+        self.country_language = country_language
         self.id = id
 
     
