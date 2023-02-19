@@ -14,3 +14,14 @@ def save(country):
     country.id = id
     return country
 
+def select_all():
+        countries = []
+
+        sql = "SELECT * FROM countries"
+        results = run_sql(sql)
+
+        for row in results:
+                city = city_repository.select(row['city_id'])
+                country = Country(row['country_name'], row['country_continent'], row['country_population'], row['country_language'], city, row['id'])
+        return countries
+

@@ -10,3 +10,24 @@ def save(city):
     id = results[0]['id']
     city.id = id
     return city
+
+def select_all():
+    cities = []
+    
+    sql = "SELECT * FROM cities"
+    results = run_sql(sql)
+
+    for row in results:
+        city = City(row['city_name'], row['country'], row['id'])
+        cities.append(city)
+        return cities
+
+def select(id):
+    city = None
+    sql = "SELECT * FROM cities WHERE id = %s"
+    values = [id]
+    results = run_sql(sql, values)
+    if results:
+        result = results[0]
+        city = City(result['city_name'], result['country'], result['id'])
+    return city 
