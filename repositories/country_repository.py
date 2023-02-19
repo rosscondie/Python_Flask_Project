@@ -23,5 +23,6 @@ def select_all():
         for row in results:
                 city = city_repository.select(row['city_id'])
                 country = Country(row['country_name'], row['country_continent'], row['country_population'], row['country_language'], city, row['id'])
+                countries.append(country)
         return countries
 
