@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form action="/countries" method="POST">
+        <div>
+            <label for="country_name">Country:</label>
+            <input type="text" id="country_name" name="country_name" placeholder="Country" required autofocus>
+        </div>
+        
+    </form>
+{% endblock  %}
