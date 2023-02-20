@@ -1,11 +1,11 @@
 from db.run_sql import run_sql
-
 from models.city import City
 from models.country import Country
+import repositories.country_repository as country_repository
 
 def save(city):
-    sql = "INSERT INTO cities (city_name, country) VALUES (%s, %s) RETURNING *"
-    values = [city.city_name, city.country]
+    sql = "INSERT INTO cities (city_name, country_id) VALUES (%s, %s) RETURNING *"
+    values = [city.city_name, city.country.id]
     results = run_sql(sql, values)
     id = results[0]['id']
     city.id = id
@@ -18,9 +18,11 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        city = City(row['city_name'], row['country'], row['id'])
+        country = country_repository.select(row['country_id'])
+        city = City(row['city_name'], country, row['id'])
         cities.append(city)
-        return cities
+    
+    return cities
 
 def select(id):
     city = None
@@ -29,7 +31,8 @@ def select(id):
     results = run_sql(sql, values)
     if results:
         result = results[0]
-        city = City(result['city_name'], result['country'], result['id'])
+        country = country_repository.select(result['country_id'])
+        city = City(result['city_name'], country, result['id'])
     return city 
 
 def delete_all():
@@ -42,19 +45,6 @@ def delete(id):
     run_sql(sql, values)
 
 def update(city):
-    sql = "UPDATE cities SET (city_name, country) = (%s, %s) WHERE id = %s"
-    values = [city.city_name, city.country, city.id]
+    sql = "UPDATE cities SET (city_name, country_id) = (%s, %s) WHERE id = %s"
+    values = [city.city_name, city.country.id, city.id]
     run_sql(sql, values)
-
-def countries(city):
-    countries = []
-
-    sql = "SELECT * FROM countries WHERE city_id = %s"
-    values = [city.id]
-    results = run_sql(sql, values)
-
-    for row in results:
-        # Should I add city here?
-        country = Country(row['country_name'], row['country_continent'], row['country_population'], row['country_language'], row['id'])
-        countries.append(country)
-    return countries 

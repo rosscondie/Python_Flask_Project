@@ -6,7 +6,7 @@
         <div class="content">
             <a href="/countries/{{country.id}}">{{ country.country_name }}</a>
             <li>Continent: {{ country.country_continent }}</li>
-            <li>Population: {{ country.country_population }}</li>
+            <li>Population: {{ country.get_population() }}</li>
             <li>Language: {{ country.country_language }}</li>
         </div>
     </div>

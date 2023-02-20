@@ -11,3 +11,7 @@ class TestCity(unittest.TestCase):
 
     def test_city_has_country(self):
         self.assertEqual("Germany", self.city.country)
+
+    def test_city_has_no_id_initially(self):
+        self.assertIsNone(self.city.id)
+
