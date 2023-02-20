@@ -14,7 +14,7 @@
     {% for city in country_cities  %}
         <p>{{ city.city_name }}</p>
     {% endfor %}
-    <p><a href="/cities/new">Add City</a></p>
+    <p><a href="/countries/{{country.id}}/new_city">Add City</a></p>
 </div>
     
 {% endblock  %}

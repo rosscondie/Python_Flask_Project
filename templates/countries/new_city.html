@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="/cities" method="POST">
+    <select name="country_name" id="country_name">{{ country.id.city_name }}</select>
+</form>    
+{% endblock  %}
