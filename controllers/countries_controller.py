@@ -38,3 +38,10 @@ def create_country():
 def show_country(id):
     country = country_repository.select(id)
     return render_template("/countries/show.html", country = country)
+
+# EDIT
+# GET "/countries/<id>/edit"
+@countries_blueprint.route("/countries/<id>/edit")
+def edit_country(id):
+    country = country_repository.select(id)
+    return render_template("/countries/edit.html", country = country)
