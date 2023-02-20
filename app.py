@@ -7,6 +7,9 @@ app = Flask(__name__)
 
 app.register_blueprint(countries_blueprint)
 
+
+# This route displays the homepage html file
+
 @app.route("/")
 def home():
     return render_template("index.html")
