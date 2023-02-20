@@ -37,7 +37,8 @@ def create_country():
 @countries_blueprint.route("/countries/<id>")
 def show_country(id):
     country = country_repository.select(id)
-    return render_template("/countries/show.html", country = country)
+    country_cities = country_repository.cities(country)
+    return render_template("/countries/show.html", country = country, country_cities = country_cities)
 
 # EDIT
 # GET "/countries/<id>/edit"
