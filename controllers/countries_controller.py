@@ -6,7 +6,11 @@ import repositories.city_repository as city_repository
 
 countries_blueprint = Blueprint("countries", __name__)
 
+# CRUD - CREATE, READ, UPDATE, DELETE 
+# RESTful routes - GET, POST, PUT, DELETE
+
 @countries_blueprint.route("/countries")
 def countries():
     countries = country_repository.select_all()
     return render_template("countries/index.html", all_countries = countries)
+
