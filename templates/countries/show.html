@@ -2,7 +2,14 @@
 {% block content %}
 
 <div>
-    
+    <p>Country: {{ country.country_name }}</p>
+    <hr>
+    <p>Continent: {{ country.country_continent }}</p>
+    <p>Population: {{ country.get_population() }}</p>
+    <p>Language: {{ country.country_language }}</p>
+    <p>Visited? </p>
+    <p><a href="">Cities</a></p>
+    <p><a href="">Edit</a></p>
 </div>
     
 {% endblock  %}
