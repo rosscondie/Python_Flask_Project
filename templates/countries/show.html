@@ -8,7 +8,6 @@
     <p>Continent: {{ country.country_continent }}</p>
     <p>Population: {{ country.get_population() }}</p>
     <p>Language: {{ country.country_language }}</p>
-    <p>Visited? </p>
     <p>Cities: </p>
 
     {% for city in country_cities  %}
@@ -17,6 +16,8 @@
         <form action="/cities/{{city.id}}/delete" method="POST">
             <button type="submit">Delete City</button>
         </form>
+
+    
 
         {% endfor %}
    
