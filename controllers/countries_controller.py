@@ -38,8 +38,6 @@ def create_city(id):
     city_repository.save(city)
     return redirect(f"/countries/{id}")
 
-
-
 # CREATE
 # POST "/countries"
 @countries_blueprint.route("/countries", methods=['POST'])
@@ -81,8 +79,14 @@ def update_country(id):
 
 # DELETE 
 # DELETE "/countries/<id>"
-
 @countries_blueprint.route("/countries/<id>/delete", methods=['POST'])
 def delete_country(id):
     country_repository.delete(id)
     return redirect("/countries")
+
+# DELETE CITY ROUTE
+@countries_blueprint.route("/cities/<id>/delete", methods=['POST'])
+def delete_city(id):
+    removed_city = city_repository.select(id)
+    city_repository.delete(id)
+    return redirect(f"/countries/{removed_city.country.id}")

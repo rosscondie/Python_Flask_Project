@@ -4,9 +4,12 @@ class Country:
         self.country_continent = country_continent
         self.country_population = country_population
         self.country_language = country_language
+        
         self.id = id
 
-    
+    def mark_as_visited(self):
+        self.visited = True
+
     def get_population(self):
         short_form_population = self.country_population / 1000000 
         if short_form_population.is_integer():

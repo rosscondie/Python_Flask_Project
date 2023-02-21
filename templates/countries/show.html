@@ -3,8 +3,8 @@
 
 <div>
     <p>Country: {{ country.country_name }}</p>
-    <p><a href="/countries/{{country.id}}//edit">Edit</a></p>
-    <hr>
+    <p><a href="/countries/{{country.id}}//edit"> Edit</a></p>
+    <hr> 
     <p>Continent: {{ country.country_continent }}</p>
     <p>Population: {{ country.get_population() }}</p>
     <p>Language: {{ country.country_language }}</p>
@@ -13,8 +13,15 @@
 
     {% for city in country_cities  %}
         <p>{{ city.city_name }}</p>
-    {% endfor %}
+
+        <form action="/cities/{{city.id}}/delete" method="POST">
+            <button type="submit">Delete City</button>
+        </form>
+
+        {% endfor %}
+   
     <p><a href="/countries/{{country.id}}/new_city">Add City</a></p>
+
 </div>
     
 {% endblock  %}
