@@ -59,7 +59,7 @@ def cities(country):
 
     for row in results:
         country = country_repository.select(row['country_id'])
-        city = City(row['city_name'], country, row['id'])
+        city = City(row['city_name'], country, row['visited'], row['id'])
 
         cities.append(city)
     return cities 

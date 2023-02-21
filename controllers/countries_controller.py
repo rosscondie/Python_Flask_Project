@@ -34,7 +34,8 @@ def new_city(id):
 def create_city(id):
     city_name = request.form['city_name']
     country = country_repository.select(id)
-    city = City(city_name, country)
+    visited = request.form['visited']
+    city = City(city_name, country, visited)
     city_repository.save(city)
     return redirect(f"/countries/{id}")
 

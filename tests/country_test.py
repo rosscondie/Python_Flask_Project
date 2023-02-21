@@ -25,5 +25,5 @@ class TestCountry(unittest.TestCase):
         country = Country("Scotland", "Europe", 5000000, "English/Gaelic", 9)
         self.assertIsNotNone(country.id)
 
-    def test_population_returns_as_float(self):
-        self.assertEqual(83.2, self.country.get_population())
+    def test_population_returns_as_formatted_string(self):
+        self.assertEqual("83.2 Million" , self.country.get_population())
