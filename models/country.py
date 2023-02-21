@@ -4,7 +4,6 @@ class Country:
         self.country_continent = country_continent
         self.country_population = country_population
         self.country_language = country_language
-        
         self.id = id
 
     def mark_as_visited(self):

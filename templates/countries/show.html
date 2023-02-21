@@ -16,17 +16,35 @@
         <form action="/cities/{{city.id}}/delete" method="POST">
             <button type="submit">Delete City</button>
         </form>
-
-    
-        <div>
-    
-            {% if city.visited  == True %}
-            <i class="fa fa-check fa-2x" style="color:green" aria-hidden="true"></i>
-            {% else %}
-              <i class="fa fa-times fa-2x" aria-hidden="true"></i>
-            {% endif %}
+        
+        {% if city.visited  == True %}
+        <i class="fa fa-check fa-2x" style="color:green" aria-hidden="true"></i>
+        {% else %}
+          <i class="fa fa-times fa-2x" aria-hidden="true"></i>
           
+          {% endif %}
+    
+          <div>
+            <form action="/cities/{{city.id}}" method="POST">
+                <label for="visited">Visited:</label>
+                <select name="visited" id="visited">
+
+                    <option value="true"
+                     {% if city.visited == True %} selected="selected" {% endif %}>
+                        Visited
+                    </option>
+                       
+                    <option value="false"
+                    {% if city.visited == False %} selected="selected" {% endif %}>
+                    Not Visited
+                </option>
+            </select>
+                <button type="submit">Mark as Visited</button>
+            </form>
         </div>
+       
+      
+
     
 
         {% endfor %}
