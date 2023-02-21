@@ -77,6 +77,15 @@ def update_country(id):
     country_repository.update(country)
     return redirect("/countries")
 
+# UPDATE CITY ROUTE
+@countries_blueprint.route("/cities/<id>", methods=['POST'])
+def update_city(id):
+    city_name = request.form['city_name']
+    country = country_repository.select(id)
+    visited = request.form['visited']
+    city = City(city_name, country, visited)
+    city_repository.update(city)
+    return render_template("/countries/show.html")
 # DELETE 
 # DELETE "/countries/<id>"
 @countries_blueprint.route("/countries/<id>/delete", methods=['POST'])
