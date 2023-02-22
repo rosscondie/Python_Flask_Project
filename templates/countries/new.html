@@ -1,26 +1,28 @@
 {% extends 'base.html' %}
 {% block content %}
     <form action="/countries" method="POST">
-        <div>
+        <div class="country-name">
             <label for="country_name">Country:</label>
             <input type="text" id="country_name" name="country_name" placeholder="Country" required autofocus>
         </div>
         
-        <div>
+        <div class="country-continent">
             <label for="country_continent">Continent:</label>
             <input type="text" id="country_continent" name="country_continent" placeholder="Continent">
         </div>
         
-        <div>
+        <div class="country-pop">
             <label for="country_population">Population:</label>
             <input type="text" id="country_population" name="country_population" placeholder="Population">
         </div>
-        <div>
+        <div class="country-language">
             <label for="country_language">Language: </label>
             <input type="text" id="country_language" name="country_language" placeholder="Language">
         </div>
-        
-        <button type="submit">Add</button>
+        <div class="add-country-btn">
+            <button type="submit">Add</button>
+            <span class="material-symbols-outlined">flag</span>
+        </div>
         
     </form>
 {% endblock  %}

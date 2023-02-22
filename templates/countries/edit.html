@@ -1,26 +1,29 @@
 {% extends 'base.html' %}
 {% block content %}
-<form action="/countries/{{country.id}}" method="POST">
-    <div>
-        <label for="country_name">Country:</label>
-        <input type="text" id="country_name" name="country_name" value="{{country.country_name}}" required autofocus>
-    </div>
+<div>
+    <form action="/countries/{{country.id}}" method="POST">
+        <div class="country-name">
+            <label for="country_name">Country:</label>
+            <input type="text" id="country_name" name="country_name" value="{{country.country_name}}" required autofocus>
+        </div>
 
-    <div>
-        <label for="country_continent">Continent:</label>
-        <input type="text" id="country_continent" name="country_continent" value="{{country.country_continent}}" required>
-    </div>
+        <div class="country-continent">
+            <label for="country_continent">Continent:</label>
+            <input type="text" id="country_continent" name="country_continent" value="{{country.country_continent}}" required>
+        </div>
 
-    <div>
-        <label for="country_population">Population:</label>
-        <input type="text" id="country_population" name="country_population" value="{{country.country_population}}">
-    </div>
+        <div class="country-pop">
+            <label for="country_population">Population:</label>
+            <input type="text" id="country_population" name="country_population" value="{{country.country_population}}">
+        </div>
 
-    <div>
-        <label for="country_language">Language</label>
-        <input type="text" id="country_language" name="country_language" value="{{country.country_language}}">
-    </div>
-
-    <button type="submit">Update Country</button>
-</form>    
+        <div class="country-language">
+            <label for="country_language">Language</label>
+            <input type="text" id="country_language" name="country_language" value="{{country.country_language}}">
+        </div>
+        <div class="update-btn-position">
+            <button class="update-btn" type="submit">Update Country</button>
+        </div>
+    </form>    
+</div>
 {% endblock  %}

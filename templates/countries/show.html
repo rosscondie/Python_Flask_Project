@@ -15,7 +15,7 @@
     </div>
     <div>
         {% for city in country_cities  %}
-        <p>{{ city.city_name }}</p>
+        <p class="city-name">{{ city.city_name }}</p>
 
         
         {% if city.visited  == True %}
@@ -24,7 +24,7 @@
         <i class="fa fa-times fa-2x" aria-hidden="true"></i>
         {% endif %}    
         <div>
-          <form action="/cities/{{city.id}}" method="POST">
+          <form class="visited-section" action="/cities/{{city.id}}" method="POST">
               <label for="visited">Visited:</label>
               <select name="visited" id="visited">
 
@@ -38,11 +38,11 @@
                   Not Visited
               </option>
           </select>
-              <button type="submit">Mark as Visited</button>
+              <button type="submit">Submit</button>
           </form>
       </div>
     </div>
-    <div>
+    <div class="delete-btn">
         <form action="/cities/{{city.id}}/delete" method="POST">
             <button type="submit">Delete City</button>
         </form>
@@ -52,6 +52,8 @@
         {% endfor %}
    
     <p><a class="link-style" href="/countries/{{country.id}}/new_city">Add City</a></p>
+
+    
 
 </div>
     

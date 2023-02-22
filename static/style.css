@@ -121,3 +121,70 @@ body {
     font-size: 1.4rem;
     font-weight: bold;
 }
+
+.about_us {
+    font-size: 1.4rem;
+}
+
+.delete-btn {
+    padding-top: 20px;
+    padding-bottom:20px;
+}
+
+.visited-section {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    padding-top: 20px;
+    font-size: 1rem;
+}
+
+
+
+.city-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.country-name {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.country-continent {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.country-pop {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 5px;
+}
+
+.country-language {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.update-btn-position {
+    padding-left: 30px;
+}
+
+.new-city {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.add-city-btn {
+    padding-left: 35px;
+}
+
+.add-country-btn {
+    padding-left: 50px;
+}
+
+.material-symbols-outlined {
+    font-size: 2rem;
+}

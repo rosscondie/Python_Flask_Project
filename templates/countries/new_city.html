@@ -2,13 +2,13 @@
 {% block content %}
 <form action="/countries/{{country.id}}/create_city" method="POST">
     
-    <div>
+    <div class="new-city">
         <label for="city_name">City :</label>
         <input type="text" id="city_name" name="city_name" autofocus>
     </div>
-
-    <button type="submit">Add City To {{country.country_name}}</button>
-
+    <div class="add-city-btn">
+        <button type="submit">Add City To {{country.country_name}}</button>
+    </div>
     
 
 </form>
