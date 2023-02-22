@@ -7,12 +7,16 @@
 }
 
 body {
+    display: grid;
+    grid-template-rows:auto 1fr auto;
+    height: 100vh;
     background-color: lightgoldenrodyellow;
 }
 
 .main-header {
-    background-image: url("./images/header_background_2.jpeg");
+    background-image: url("./images/skyline.jpeg");
     background-size: cover;
+    background-position: center;
     padding-bottom: 25px;
 }
 
@@ -72,6 +76,9 @@ body {
     padding: .25rem 0;
     display: flex;
     justify-content: center;
+    /* position: fixed;
+    width: 100%;
+    bottom: 0; */
 }
 
 .container {
@@ -91,15 +98,22 @@ body {
    gap: 1rem;
    list-style: none;
    padding: 0 5%;
-
 }
 
 .content > li {
     padding: .5rem;
+    font-size: 1rem;
+    font-weight: bolder;
 }
 
 
 .content > li > a {
+    font-family: 'Oswald', sans-serif;
     font-size: 1.3rem;
     font-weight: bold;
+}
+
+.show-country {
+   font-weight: bolder;
+   font: 1.3;
 }
