@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='normalize.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
     <title>My Countries List</title>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul class="menu">
+    <header class="main-header">
+        <nav class="nav main-nav">
+            <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/countries">Countries</a></li>
                 <li><a href="/about">About</a></li>
@@ -20,14 +22,14 @@
             </ul>
         </nav>
         
-        <h1>Fugitive Travel</h1>
+        <h1 class="header-name">Fugitive Travel</h1>
     </header>
 
     <div class="container">
         {% block content %}
         {% endblock  %}
     </div>
-    <footer>
+    <footer class="main-footer">
         <h3>Fugitive Travel &copy;</h3>
     </footer>
 </body>

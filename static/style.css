@@ -1,5 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Gajraj+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 * {
     font-family: Raleway;
+    
+}
+
+.main-header {
+    background-image: url("./images/header_background_2.jpeg");
+    background-size: cover;
+    padding-bottom: 30px;
+}
+
+
+
+.nav ul {
+    margin: 0;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    display: inline-block;
+    padding: 2rem;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: lightgrey;
+}
+
+.main-nav {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+.main-nav li {
+    padding: 0 5%;
+}
+
+.header-name {
+    text-align: center;
+    margin: 0;
+    font-size: 4rem;
+    font-family: 'Gajraj One', cursive;
+    font-weight: normal;
+    color: white;
+}
+
+.welcome-header {
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.main-footer {
+    background-color: black;
+    color: white;
+    padding: .25rem 0;
+    display: flex;
+    justify-content: center;
+
 }
