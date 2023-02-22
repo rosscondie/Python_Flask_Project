@@ -2,55 +2,56 @@
 {% block content %}
 
 <div>
-    <div class="show-country">
-        <p><a href="/countries/{{country.id}}//edit"> Edit</a></p>
+    <div>
+        <p><a class="link-style" href="/countries/{{country.id}}//edit"> Edit</a></p>
+    <aside class="single-country">
         <p>Country: {{ country.country_name }}</p>
         
         <p>Continent: {{ country.country_continent }}</p>
         <p>Population: {{ country.get_population() }}</p>
         <p>Language: {{ country.country_language }}</p>
         <p>Cities: </p>
+    </aside>
     </div>
-    {% for city in country_cities  %}
+    <div>
+        {% for city in country_cities  %}
         <p>{{ city.city_name }}</p>
 
-        <form action="/cities/{{city.id}}/delete" method="POST">
-            <button type="submit">Delete City</button>
-        </form>
         
         {% if city.visited  == True %}
         <i class="fa fa-check fa-2x" style="color:green" aria-hidden="true"></i>
         {% else %}
         <i class="fa fa-times fa-2x" aria-hidden="true"></i>
-        
-          {% endif %}
-    
-          <div>
-            <form action="/cities/{{city.id}}" method="POST">
-                <label for="visited">Visited:</label>
-                <select name="visited" id="visited">
+        {% endif %}    
+        <div>
+          <form action="/cities/{{city.id}}" method="POST">
+              <label for="visited">Visited:</label>
+              <select name="visited" id="visited">
 
-                    <option value="true"
-                     {% if city.visited == True %} selected="selected" {% endif %}>
-                        Visited
-                    </option>
-                       
-                    <option value="false"
-                    {% if city.visited == False %} selected="selected" {% endif %}>
-                    Not Visited
-                </option>
-            </select>
-                <button type="submit">Mark as Visited</button>
-            </form>
-        </div>
-       
-      
-
+                  <option value="true"
+                   {% if city.visited == True %} selected="selected" {% endif %}>
+                      Visited
+                  </option>
+                     
+                  <option value="false"
+                  {% if city.visited == False %} selected="selected" {% endif %}>
+                  Not Visited
+              </option>
+          </select>
+              <button type="submit">Mark as Visited</button>
+          </form>
+      </div>
+    </div>
+    <div>
+        <form action="/cities/{{city.id}}/delete" method="POST">
+            <button type="submit">Delete City</button>
+        </form>
+    </div>
     
 
         {% endfor %}
    
-    <p><a href="/countries/{{country.id}}/new_city">Add City</a></p>
+    <p><a class="link-style" href="/countries/{{country.id}}/new_city">Add City</a></p>
 
 </div>
     
