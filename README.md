@@ -47,6 +47,25 @@ To run the app:
 flask run
 ```
 
+You should see this in your terminal: 
+```bash
+# terminal 
+ * Serving Flask app 'app.py'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:4999
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 453-664-860
+ ```
+ 
+ You can click on the link to open app in your browser:
+ ```bash
+ # terminal
+ * Running on http://127.0.0.1:4999
+ ```
+
 
 
 
