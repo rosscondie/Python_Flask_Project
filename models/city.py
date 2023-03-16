@@ -6,5 +6,9 @@ class City:
         self.visited = visited
         self.id = id
 
+
+# This function defines a method which takes in 
+# the falsy boolean from visited and changes it to truthy.
+
     def mark_as_visited(self):
         self.visited = True
