@@ -12,11 +12,16 @@ country1 = Country("Germany", "Europe", 83200000, "German")
 country_repository.save(country1)
 country2 = Country("Scotland", "Europe", 5000000, "English")
 country_repository.save(country2)
+country3 = Country("Poland", "Europe", 37500000, "Polish")
+country_repository.save(country3)
 
 city1 = City("Hannover", country1)
 city_repository.save(city1)
 city2 = City("Edinburgh", country2)
 city_repository.save(city2)
+city3 = City("Poznan", country3)
+city_repository.save(city3)
+
 
 test_get_all_cities = city_repository.select_all()
 # test_get_one_city = city_repository.select(9)

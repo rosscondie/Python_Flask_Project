@@ -1,20 +1,27 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
 <div class="add-new-country">
-    <p><a href="/countries/new">Add New Country</a></p>
+  <h4>Add your travelled countries and cities!</h2>
+    <h5>Click on your country </h5>
+    <h6>Then set it to visited!</h6>
+    
+    
+  <p><a href="/countries/new">Add New Country</a></p>
 </div>
 
 <div class="countries">
-{% for country in all_countries  %}
-        <div class="content">
-            <li><a href="/countries/{{country.id}}">{{ country.country_name }}</a></li>
-            <li>Continent: {{ country.country_continent }}</li>
-            <li>Population: {{ country.get_population() }}</li>
-            <li>Language: {{ country.country_language }}</li>
-        </div>
-        {% endfor %}
-    </div>
+  {% for country in all_countries %}
+  <div class="content">
+    <li><a href="/countries/{{country.id}}">{{ country.country_name }}</a></li>
+    <li>Continent: {{ country.country_continent }}</li>
+    <li>Population: {{ country.get_population() }}</li>
+    <li>Language: {{ country.country_language }}</li>
+  </div>
+  
+  
+  {% endfor %}
 
-    
-{% endblock  %}
+  
+</div>
+
+{% endblock %}

@@ -2,189 +2,190 @@
 @import url('https://fonts.googleapis.com/css2?family=Gajraj+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 * {
-    font-family: Raleway;
+  font-family: Raleway;
 }
 
 body {
-    display: grid;
-    grid-template-rows:auto 1fr auto;
-    height: 100vh;
-    background-color: lightgoldenrodyellow;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  background-color: lightgoldenrodyellow;
 }
 
 .main-header {
-    background-image: url("./images/skyline.jpeg");
-    background-size: cover;
-    background-position: center;
-    padding-bottom: 25px;
+  background-image: url('./images/skyline.jpeg');
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 25px;
 }
 
 .nav ul {
-    margin: 0;
+  margin: 0;
 }
 
 .nav li {
-    display: inline;
+  display: inline;
 }
 
 .nav a {
-    display: inline-block;
-    padding: 1rem;
-    color: whitesmoke;
-    text-decoration: none;
-    font-size: 1.5rem;
+  display: inline-block;
+  padding: 1rem;
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 1.5rem;
 }
 
 .nav a:hover {
-    background-color: lightgrey;
+  background-color: lightgrey;
 }
 
 .main-nav {
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: lighter;
-    border-bottom: 1px solid rgba(255, 255, 255, .3);
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: lighter;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .main-nav li {
-    padding: 0 5%;
+  padding: 0 5%;
 }
 
 .header-name {
-    text-align: center;
-    margin: 0;
-    font-size: 4rem;
-    font-family: 'Gajraj One', cursive;
-    font-weight: normal;
-    color: white;
-    padding-top: 30px;
+  text-align: center;
+  margin: 0;
+  font-size: 4rem;
+  font-family: 'Gajraj One', cursive;
+  font-weight: normal;
+  color: white;
+  padding-top: 30px;
 }
 
 .welcome-header {
-    font-family: 'Oswald', sans-serif;
-    font-weight: normal;
-    text-align: center;
-    font-size: 2.5rem;
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  text-align: center;
+  font-size: 2.5rem;
 }
 
 .main-footer {
-    background-color: black;
-    color: white;
-    padding: .25rem 0;
-    display: flex;
-    justify-content: center;
-    /* position: fixed;
+  background-color: black;
+  color: white;
+  padding: 0.25rem 0;
+  display: flex;
+  justify-content: center;
+  /* position: fixed;
     width: 100%;
     bottom: 0; */
 }
 
 .container {
-    text-align: center;
-    
+  text-align: center;
 }
 
-
 .add-new-country {
-    font-size: 1.5rem;
-    font-weight:bold;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.add-new-country h4,
+h5,
+h6 {
+  padding: 0.4rem;
+  margin: 0;
 }
 
 .countries {
-   display: flex;
-   justify-content: space-around;
-   gap: 1rem;
-   list-style: none;
-   padding: 0 5%;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  list-style: none;
+  padding: 0 5%;
 }
 
 .content > li {
-    padding: .5rem;
-    font-size: 1.4rem;
-    font-weight: bolder;
+  padding: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: bolder;
 }
 
-
 .content > li > a {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.3rem;
-    font-weight: bolder;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bolder;
 }
 
 .link-style {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.3rem;
-    font-weight: bolder;
-    
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bolder;
 }
 
 .single-country {
-    font-size: 1.4rem;
-    font-weight: bold;
+  font-size: 1.4rem;
+  font-weight: bold;
 }
 
 .about_us {
-    font-size: 1.4rem;
+  font-size: 1.4rem;
 }
 
 .delete-btn {
-    padding-top: 20px;
-    padding-bottom:20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .visited-section {
-    display: flex;
-    justify-content: center;
-    gap: .5rem;
-    padding-top: 20px;
-    font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-top: 20px;
+  font-size: 1rem;
 }
 
-
-
 .city-name {
-    font-size: 1.4rem;
-    font-weight: bold;
+  font-size: 1.4rem;
+  font-weight: bold;
 }
 
 .country-name {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
 }
 
 .country-continent {
-    padding-top: 10px;
-    padding-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .country-pop {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 5px;
 }
 
 .country-language {
-    padding-top: 10px;
-    padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 .update-btn-position {
-    padding-left: 30px;
+  padding-left: 30px;
 }
 
 .new-city {
-    padding-top: 10px;
-    padding-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .add-city-btn {
-    padding-left: 35px;
+  padding-left: 35px;
 }
 
 .add-country-btn {
-    padding-left: 50px;
+  padding-left: 50px;
 }
 
 .material-symbols-outlined {
-    font-size: 2rem;
+  font-size: 2rem;
 }
